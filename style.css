@@ -1,12 +1,14 @@
+/* General page styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #F5F5F5;
+  background-color: #f5f5f5;
   color: #333;
 }
 
+/* Header and navigation */
 header {
-  background: #FF914D;
+  background-color: #FF914D;
   color: white;
   padding: 20px;
   text-align: center;
@@ -23,6 +25,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hero section */
 .hero {
   text-align: center;
   padding: 50px;
@@ -46,6 +49,7 @@ button:hover {
   background: #388E3C;
 }
 
+/* Footer */
 footer {
   background: #333;
   color: white;
@@ -53,6 +57,8 @@ footer {
   padding: 15px;
   margin-top: 50px;
 }
+
+/* Services page search and list */
 #serviceSearch {
   padding: 10px;
   width: 300px;
@@ -60,10 +66,12 @@ footer {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 #serviceList {
   list-style-type: none;
   padding: 0;
 }
+
 #serviceList li {
   background: #fff;
   margin: 10px 0;
