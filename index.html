@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Petopia Hub</title>
-  <!-- CSS must be linked here -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petopia Hub | Smart Care</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🐾 Petopia Hub</h1>
-    <p>Where Pets Find Paradise</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="forum.html">Community Forum</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>Connecting Pet Owners with Trusted Care</h2>
-      <input type="text" id="searchBar" placeholder="Search for vets, groomers, trainers...">
-      <button onclick="searchServices()">Search</button>
-    </section>
-  </main>
+    <div class="hub-container">
+        <header class="no-print">
+            <h1>Petopia Hub</h1>
+            <p>Your Pet’s Digital Universe</p>
+        </header>
 
-  <footer>
-    <p>&copy; 2026 Petopia Hub. All rights reserved.</p>
-  </footer>
+        <div class="no-print">
+            <div class="form-group">
+                <label>Pet Name</label>
+                <input type="text" id="petName" placeholder="e.g. Simba">
+            </div>
 
-  <!-- JS must be linked here -->
-  <script src="js/script.js"></script>
+            <div class="form-group">
+                <label>Pet Breed/Type</label>
+                <input type="text" id="petType" placeholder="e.g. Persian Cat">
+            </div>
+
+            <div class="form-group">
+                <label>Last Vet Visit</label>
+                <input type="date" id="vetDate">
+            </div>
+
+            <button class="btn-main" onclick="createHub()">Launch Hub</button>
+        </div>
+
+        <div id="passport">
+            <div style="display: flex; justify-content: space-between;">
+                <h2 id="resName" style="margin:0;">Name</h2>
+                <span style="color: #00b894; font-weight: bold;">● Active</span>
+            </div>
+            <p id="resType" style="margin: 5px 0; color: #636e72;">Type</p>
+
+            <div class="tip-box" id="dailyTip">
+                <strong>Petopia Tip:</strong> Ready to care for your pet!
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            
+            <label>Today's Mood Log:</label>
+            <div class="mood-selector no-print">
+                <button class="mood-btn" onclick="logMood('Happy')">😊</button>
+                <button class="mood-btn" onclick="logMood('Sleepy')">😴</button>
+                <button class="mood-btn" onclick="logMood('Energetic')">⚡</button>
+                <button class="mood-btn" onclick="logMood('Hungry')">🍖</button>
+            </div>
+            <p id="moodStatus" style="font-style: italic; font-size: 0.9rem; text-align: center; color: #6c5ce7;"></p>
+
+            <button class="print-btn no-print" onclick="window.print()">Print Care Summary</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
