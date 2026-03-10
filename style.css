@@ -53,3 +53,21 @@ footer {
   padding: 15px;
   margin-top: 50px;
 }
+#serviceSearch {
+  padding: 10px;
+  width: 300px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#serviceList {
+  list-style-type: none;
+  padding: 0;
+}
+#serviceList li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
