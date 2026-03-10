@@ -1,81 +1,108 @@
-/* General page styles */
+:root {
+    --primary: #6c5ce7;
+    --secondary: #00b894;
+    --warning: #fdcb6e;
+    --bg: #f9f9fb;
+    --card: #ffffff;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f5f5;
-  color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Header and navigation */
-header {
-  background-color: #FF914D;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.hub-container {
+    background: var(--card);
+    max-width: 450px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+header { text-align: center; margin-bottom: 25px; }
+header h1 { color: var(--primary); margin: 0; font-size: 2.2rem; }
+header p { color: #636e72; font-size: 0.9rem; }
+
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-weight: 600; color: #2d3436; }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+input:focus { border-color: var(--primary); outline: none; }
+
+.btn-main {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Hero section */
-.hero {
-  text-align: center;
-  padding: 50px;
+#passport {
+    margin-top: 30px;
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #f1f2f6;
+    border-radius: 20px;
+    border-left: 8px solid var(--primary);
 }
 
-input {
-  padding: 10px;
-  width: 300px;
-  margin-top: 20px;
+.mood-selector {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
 }
 
-button {
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+.mood-btn {
+    background: #f1f2f6;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
-button:hover {
-  background: #388E3C;
+.tip-box {
+    background: #e8f0fe;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #1a73e8;
+    border-left: 4px solid #1a73e8;
 }
 
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 50px;
+.print-btn {
+    margin-top: 15px;
+    background: none;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #636e72;
 }
 
-/* Services page search and list */
-#serviceSearch {
-  padding: 10px;
-  width: 300px;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#serviceList {
-  list-style-type: none;
-  padding: 0;
-}
-
-#serviceList li {
-  background: #fff;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+@media print {
+    .no-print { display: none; }
+    #passport { display: block !important; border: 1px solid #ccc; }
 }
